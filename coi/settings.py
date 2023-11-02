@@ -1,5 +1,5 @@
-import os
 try:
+    import os
     from .settings_local import *
 except ImportError:
     SECRET_KEY = os.environ['SECRET_KEY']
