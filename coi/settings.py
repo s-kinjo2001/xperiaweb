@@ -19,6 +19,8 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS    = [ "https://django-render-z1ex.onrender.com" ]
+
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
